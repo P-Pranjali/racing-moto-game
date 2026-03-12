@@ -16,7 +16,7 @@ Play the game online: [Racing Moto Game](https://p-pranjali.github.io/racing-mot
 - 🚦 Interactive racing game with a **live score**  
 - 🏍️ Smooth movement for the player’s race car  
 - 🔵 Random blue cars appear from left or right  
-- 🔊 Jump sound effect when pressing spacebar  
+- 🔊 Jump sound effect when moving red race car.  
 - ✅ Works in all modern browsers  
 
 ---
@@ -37,20 +37,6 @@ Play the game online: [Racing Moto Game](https://p-pranjali.github.io/racing-mot
 
 3. Open index.html in your browser
 
-**⚙️ File Structure**
-
-racing-moto-game/
-├─ index.html          # Main HTML file
-├─ style.css           # CSS styling
-├─ main.js             # Game logic (JS)
-├─ bg.jpg              # Background image
-├─ race.png            # Race car image
-├─ blue.png            # Blue car image
-├─ jumpsound.mp3       # Jump sound effect
-└─ Screenshots/        # Folder for screenshots
-   ├─ gameplay.png
-   ├─ live-score.png
-   └─ cars.png
 
    **📌 Notes**
 
@@ -64,4 +50,3 @@ Browser cache can sometimes show old versions — use Ctrl+Shift+R (Windows) or 
 
 P-Pranjali
 
-GitHub: @P-Pranjali
