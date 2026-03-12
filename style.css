@@ -1,68 +1,72 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-#game{
-    height: 500px;
+
+#game {
+    height: 100vh;
     width: 390px;
     border: 1px solid black;
     margin: 1rem auto;
-    background:url(bg.jpg) ;
-    background-size: contain;
+    background: url(bg.jpg);
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    background-position: top;
     overflow: hidden;
+    position: relative; /* needed for absolute children */
 }
-#bluecar{
+
+#bluecar {
     height: 100px;
     width: 130px;
-    background-color: black;
-    position: relative;
-    top: 0px;
+    position: absolute;
+    top: 0px; 
     left: 0px;
     text-align: center;
-    animation: move 1s linear  infinite  ;
-
+    animation: move 1s linear infinite;
 }
-#bluecar img{
+
+#bluecar img {
     height: 100px;
 }
+
 @keyframes move {
-    0%{
-        top: 0px;
-    }
-    100%{
-        top: 501px;
-    }
-    
+    0% { top: 0px; }
+    100% { top: 501px; } /* match game height */
 }
-#racecar{
+
+#racecar {
     height: 100px;
     width: 130px;
-    background-color: red;
-    position: relative;
-    top: 250px;
-    left: 130px;
+    position: absolute; /* change to absolute for consistent lanes */
+    
+    top: 550px;
+    left: 130px; /* start in middle lane */
     text-align: center;
 }
-#racecar img{
+
+#racecar img {
     height: 100px;
 }
 
-#result{
+#result {
     height: 200px;
     width: 400px;
     background-color: cornflowerblue;
-    margin:  1rem auto;
+    margin: 1rem auto;
     border-radius: 20px;
     font-size: 30px;
     text-align: center;
     color: white;
-    display:none ;
+    display: none;
 }
-#score{
+
+#score {
     font-size: 2.2rem;
     color: brown;
 }
-#btn{
+
+#btn {
     padding: 0.5rem 1rem;
     border-radius: 20px;
     border: none;
@@ -72,4 +76,17 @@
     margin-top: 10px;
     cursor: pointer;
     text-transform: uppercase;
+}
+
+#live-score {
+    position: absolute;
+    top: 10px;
+    right: 400px; /* moved inside game container */
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 100;
 }

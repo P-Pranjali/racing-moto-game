@@ -7,13 +7,18 @@ var counter = 0;
 var jumpsound = document.getElementById("jumpsound")
 
 
+var liveScore = document.getElementById("live-score"); // new live score element
 
 // bluecar move
 blueCar.addEventListener("animationiteration", function(){
     var random = ((Math.floor(Math.random() * 3)) * 130)
     blueCar.style.left = random + "px";
-    counter++
+      // Increase counter and update live score
+    counter++;
+    liveScore.innerHTML = `Score: ${counter}`; // use live-score, not #score
+   
 })
+ 
 
 //rececar move
 window.addEventListener("keydown", function(e){
@@ -33,16 +38,25 @@ window.addEventListener("keydown", function(e){
 
 
 //Game over
-setInterval(function Gameover (){
-    var blueCarTop = parseInt(window.getComputedStyle(blueCar).getPropertyValue("top"))
-    var blueCarLeft = parseInt(window.getComputedStyle(blueCar).getPropertyValue("left"));
-    var raceCarLeft = parseInt(window.getComputedStyle(raceCar).getPropertyValue("left"));
-        if((blueCarLeft === raceCarLeft) && (blueCarTop > 250) && (blueCarTop < 450)){
-            result.style.display = "block";
-            game.style.display = "none";
-            score.innerHTML = `score: ${counter} `;
+setInterval(function Gameover () {
+    var blueCarTop = blueCar.offsetTop;
+    var blueCarLeft = blueCar.offsetLeft;
+    var raceCarTop = raceCar.offsetTop;
+    var raceCarLeft = raceCar.offsetLeft;
+    var blueCarHeight = blueCar.offsetHeight;
+    var raceCarHeight = raceCar.offsetHeight;
 
-            counter = 0;
-        }
-}, 10)
+    // Collision check
+    if (
+        blueCarLeft === raceCarLeft && 
+        blueCarTop + blueCarHeight > raceCarTop && 
+        blueCarTop < raceCarTop + raceCarHeight
+    ) {
+        result.style.display = "block";
+        game.style.display = "none";
+        score.innerHTML = `score: ${counter}`;
+        counter = 0;
+    }
+}, 10);
+
 
