@@ -54,6 +54,7 @@ setInterval(function Gameover () {
     ) {
         result.style.display = "block";
         game.style.display = "none";
+        liveScore.style.display = "none";
         score.innerHTML = `score: ${counter}`;
         counter = 0;
     }

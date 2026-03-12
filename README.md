@@ -24,7 +24,7 @@ Play the game online: [Racing Moto Game](https://p-pranjali.github.io/racing-mot
 **## 🖼️ Screenshots**
 
 **Game in Action**  
-<img src="Screenshots/gameplay.png" alt="gameplay" width="500" length="250">
+<img src="Screenshots/gameplay.png" alt="gameplay" width="600" length="100">
 
 
 ---
