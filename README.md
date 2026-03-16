@@ -1,6 +1,6 @@
-# Racing Moto Game 🏍️
+# Racing Car Game 
 
-A simple browser-based **Racing Moto Game** built with **HTML, CSS, and JavaScript**.  
+A simple browser-based **Racing car Game** built with **HTML, CSS, and JavaScript**.  
 Dodge the blue cars, survive as long as you can, and track your **live score**!
 
 ---
